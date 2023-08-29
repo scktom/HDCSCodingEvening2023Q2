@@ -23,9 +23,17 @@ def decimalToHex(decimal):
         return hexadec
 
 def rgbToHex(red, green , blue):
-    first = decimalToHex(red)
-    second = decimalToHex(green)
-    third = decimalToHex(blue)
-    return first + second + third
+    #Check the numbers is allow the criterion
+    if red < 0 or red > 255:
+        return "The number less than 0 or bigger than 255!"
+    elif green < 0 or green > 255:
+        return "The number less than 0 or bigger than 255!"
+    elif blue < 0 or blue > 255:
+        return "The number less than 0 or bigger than 255!"
+    else:  
+      first = decimalToHex(red)
+      second = decimalToHex(green)
+      third = decimalToHex(blue)
+      return first + second + third
 
 print(rgbToHex(120, 145, 200))
